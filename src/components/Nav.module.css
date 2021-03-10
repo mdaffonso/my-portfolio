@@ -1,0 +1,122 @@
+.Nav {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #a53f0f;
+
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: 
+        transform 100ms ease-in-out,
+        opacity 200ms linear;
+
+    z-index: 2000;
+}
+
+.Nav::after {
+    content: '\00d7';
+    position: fixed;
+    bottom: 60px;
+    right: 25px;
+
+    font-size: 3em;
+    color: white;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transform-origin: center right;
+}
+
+.Active {
+    animation: show 100ms ease-in-out forwards;
+}
+
+.Active::after {
+    animation: bounce 1.6s ease-in-out forwards;
+}
+
+.Inactive {
+    animation: hide 100ms ease-in-out forwards;
+}
+
+.Menu::before,
+.Language::before,
+.Active::before {
+    font-size: 3em;
+    text-transform: uppercase;
+    color: white;
+    padding: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+.Menu::before {
+    content: 'menu';
+}
+
+.Language::before {
+    content: attr(data-language);
+}
+
+@keyframes show {
+    0%   { transform: translateX(-20%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes hide {
+    0%   { transform: translateX(0); opacity: 1; }
+    99%  { transform: translateX(0); opacity: 0; }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes bounce {
+    0%   { transform: scaleX(1) scaleY(1); }
+    10%  { transform: scaleX(0.4) scaleY(1.6); }
+    25%  { transform: scaleX(1.5) scaleY(0.5); }
+    40%  { transform: scaleX(0.8) scaleY(1.2); }
+    55%  { transform: scaleX(1) scaleY(1); }
+    100% { transform: scaleX(1) scaleY(1); }
+}
+
+@media (min-width: 550px) {
+    .Nav {
+        align-items: center;
+        gap: 1rem;
+        transform-origin: bottom center;
+        transform: translateY(100%) scale(0);
+    }
+
+    .Nav::after {
+        --tX: translateX(50%);
+        right: 50%;
+        transform: translateX(50%);
+        transform-origin: bottom center;
+    }
+
+    .Active {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    @keyframes show {
+        0%      { transform: translateY(-20%); opacity: 0; }
+        100%    { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes bounce {
+        0%   { transform: var(--tX) scaleY(1); }
+        10%  { transform: var(--tX) scaleY(0.4) scaleX(1.6); }
+        25%  { transform: var(--tX) scaleY(1.5) scaleX(0.5); }
+        40%  { transform: var(--tX) scaleY(0.8) scaleX(1.2); }
+        55%  { transform: var(--tX) scaleY(1) scaleX(1); }
+        100% { transform: var(--tX) scaleY(1) scaleX(1); }
+    }
+}

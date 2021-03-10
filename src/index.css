@@ -1,5 +1,49 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Condensed:wght@300&display=swap');
+
+:root {
+  --bg-color: rgba(240,205,7,1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(196, 88, 0);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(196, 88, 0);
+}
+
+html {
+  background-color: var(--bg-color);
+  scrollbar-color: rgb(196, 88, 0) var(--bg-color);
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+
+  display: grid;
+  justify-items: center;
+  align-items: center;
+
+  background-color: var(--bg-color);
+
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +51,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  background-color: transparent;
+}
+
+@media (min-width: 350px) {
+  #root {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 550px) {
+  #root {
+    font-size: 1.1rem;
+  }
 }

@@ -1,0 +1,43 @@
+.ProjectsScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2em;
+    z-index: 1;
+    animation: show 300ms cubic-bezier(.41,-0.01,.33,1.26) forwards;
+}
+
+.Title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.Intro {
+    margin: 2em 0;
+}
+
+.Cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+@keyframes show {
+    0%      {transform: translateY(-5%); opacity: 0;}
+    100%    {transform: translateY(0); opacity: 1;}
+}
+
+@media (min-width: 550px) {
+    .ProjectsScreen {
+        align-items: center;
+        padding: 1.5em clamp(2em, 10vw, 20em);
+    }
+
+    .Intro {
+        margin: 2em clamp(2em, 8vw, 20em);
+    }
+}

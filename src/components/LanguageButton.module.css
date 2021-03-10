@@ -1,0 +1,29 @@
+.LanguageButton {
+    position: relative;
+
+    width: clamp(25px, 3vw, 40px);
+    height: clamp(25px, 3vw, 40px);
+
+    border-radius: 50%;
+    border: none;
+
+    font-size: 0.65em;
+    font-variant: small-caps;
+
+    cursor: pointer;
+
+    background-color: rgb(255, 243, 188);
+
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.LanguageButton:focus,
+.LanguageButton:active {
+    outline: none;
+}
+
+@media (min-width: 550px) {
+    .LanguageButton {
+        font-size: 0.7em;
+    }
+}

@@ -1,0 +1,64 @@
+.ButtonPlus,
+.ButtonMinus {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+
+    width: 2em;
+    height: 2em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:rgb(140, 216, 25);
+    
+    color: white;
+    font-weight: 600;
+    font-size: 1em;
+
+    border: none;
+
+    transform-style: preserve-3d;
+
+    box-shadow: 1px 2px rgba(0, 0, 0, 0.1);
+
+    cursor: pointer;
+
+    overflow: hidden;
+}
+
+.ButtonFlip {
+    animation: flip 250ms ease-in-out forwards;
+}
+
+.ButtonPlus:focus,
+.ButtonMinus:focus {
+    outline: none;
+}
+
+.ButtonPlus {
+    border-radius: 3px 50% 50%;
+}
+
+.ButtonMinus {
+    border-radius: 50% 50% 3px;
+}
+
+.ButtonPlus::before,
+.ButtonMinus::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 100%;
+    background: rgba(211, 255, 14, 0.1);
+    transform: skew(45deg) translateX(-35%);
+}
+
+@keyframes flip {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(0.5);}
+    100% { transform: scale(1); }
+}

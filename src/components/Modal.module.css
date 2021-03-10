@@ -1,0 +1,158 @@
+.OffScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 1px;
+    transform: translate(-100%, -100%);
+    opacity: 0;
+}
+
+.Modal {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+
+    height: max(150vw, 150vh);
+    width: max(150vw, 150vh);
+
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0);
+
+    z-index: 2000;
+}
+
+.ModalIn {
+    animation: orbit 500ms ease-out forwards;
+}
+
+.ModalOut {
+    animation: deorbit 500ms ease-in forwards;
+}
+
+.ModalClose {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    
+    height: 50px;
+    width: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgb(255, 68, 35);
+
+    cursor: pointer;
+
+    z-index: 2500;
+
+    opacity: 0;
+
+    box-shadow: 
+        0 2px 10px rgba(0, 0, 0, 0.185),
+        0 0 0 -5px rgb(255, 145, 0);
+
+    transition: box-shadow 200ms linear;
+}
+
+.ModalCloseIn {
+    animation: drop 500ms cubic-bezier(.71,1.65,.09,.79) forwards;
+}
+
+.ModalCloseOut {
+    animation: pull 500ms cubic-bezier(1,.05,0,-0.31) forwards;
+}
+
+.ModalClose:focus,
+.ModalClose:active {
+    outline: none;
+    box-shadow: 
+        0 0 0 5px rgba(146, 0, 0, 1),
+        0 2px 10px rgba(0, 0, 0, 0.19);
+}
+
+.ModalClose::before,
+.ModalClose::after {
+    content: '';
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    height: 5px;
+    width: 35%;
+
+    border-radius: 1em;
+
+    background: white;
+}
+
+.ModalClose::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ModalClose::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.ModalContent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    place-content: center;
+    
+    z-index: 2200;
+
+    opacity: 0;
+}
+
+.ModalContentIn {
+    animation: contentIn 500ms 100ms ease-out forwards;
+}
+
+.ModalContentOut {
+    animation: contentOut 500ms ease-in forwards;
+}
+
+@keyframes orbit {
+    0%   { transform: translate(-100%, 100%); background-color: rgba(0, 0, 0, 0); }
+    30%  { background-color: rgba(0, 0, 0, 0); }
+    100% { transform: translate(-20%, 20%); background-color: rgba(0, 0, 0, 0.5); }
+}
+
+@keyframes deorbit {
+    0%   { transform: translate(-20%, 20%); background-color: rgba(0, 0, 0, 0.5); }
+    70%  { background-color: rgba(0, 0, 0, 0); }
+    100% { transform: translate(-100%, 100%); background-color: rgba(0, 0, 0, 0); }
+}
+
+@keyframes contentIn {
+    0%   { transform: translateY(-100%); opacity: 0; }
+    30%  { opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes contentOut {
+    0%   { transform: translateY(0); opacity: 1; }
+    70%  { opacity: 0; }
+    100% { transform: translateY(-100%); opacity: 0; }
+}
+
+@keyframes drop {
+    0%   { transform: translateY(-400%); opacity: 0; }
+    1%   { opacity: 1; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pull {
+    0%   { transform: translateY(0); opacity: 1; }
+    99%  { opacity: 1; }
+    100% { transform: translateY(-400%); opacity: 0; }
+}

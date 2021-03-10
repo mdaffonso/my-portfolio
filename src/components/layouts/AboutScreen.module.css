@@ -1,0 +1,78 @@
+.AboutScreen {
+    display: grid;
+    grid-template: 
+        'titles'
+        'content'
+        'extra';
+    row-gap: 2em;
+    padding: 2em;
+
+    z-index: 1;
+}
+
+.Titles {
+    grid-area: titles;
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+
+    animation: show 300ms cubic-bezier(.41,-0.01,.33,1.26) forwards;
+}
+
+.Titles h1 {
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+.Intro {
+    grid-area: content;
+    animation: show 300ms 30ms cubic-bezier(.41,-0.01,.33,1.26) forwards;
+    opacity: 0;
+}
+
+.ExtraContent {
+    grid-area: extra;
+    opacity: 0;
+    animation: show 300ms 60ms cubic-bezier(.41,-0.01,.33,1.26) forwards;
+}
+
+@keyframes show {
+    0%      {transform: translateY(50%); opacity: 0;}
+    100%    {transform: translateY(0); opacity: 1;}
+}
+
+@media (min-width: 750px) {
+    .AboutScreen {
+        grid-template:
+            'titles titles'
+            'content extra';
+        column-gap: 2em;
+        padding: 1em 10vw;
+    }
+}
+
+@media (min-width: 1295px) {
+    .AboutScreen {
+        grid-template:
+            'titles content'
+            'extra extra';
+        padding: 1em 15vw;
+        grid-template-columns: max-content 1fr;
+        column-gap: 4em;
+    }
+
+    .Titles {
+        align-items: flex-end;
+        width: max-content;
+    }
+
+    .Titles h1,
+    .Titles h3 {
+        text-align: right;
+    }
+
+    .Intro {
+        padding: 0.5em 0;
+    }
+}

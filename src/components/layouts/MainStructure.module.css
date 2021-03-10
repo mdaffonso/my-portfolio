@@ -1,0 +1,30 @@
+.MainStructure {
+    background-color: white;
+
+    position: relative;
+    display: grid;
+
+    grid-template: 'main';
+
+    height: 100%;
+
+    color: black;
+
+    background: transparent;
+}
+
+.MainStructure main {
+    padding-bottom: 3rem;
+    max-width: 100vw;
+}
+
+@media (min-width: 550px) {
+    .MainStructure {
+        place-content: center;
+    }
+
+    .MainStructure main {
+        padding-top: clamp(3rem, 10vw, 15rem);
+        padding-bottom: 0;
+    }
+}

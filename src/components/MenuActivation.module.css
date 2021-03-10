@@ -1,0 +1,44 @@
+:root {
+    --color: rgb(119, 246, 255);
+}
+
+.MenuActivation {
+    position: relative;
+
+    width: clamp(40px, 5vw, 70px);
+    height: clamp(40px, 5vw, 70px);
+
+    border-radius: 50%;
+    border: none;
+
+    cursor: pointer;
+
+    background-color: white;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.MenuActivation::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    border-radius: 50%;
+    border: none;
+
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.MenuActivation:focus,
+.MenuActivation:active {
+    outline: none;
+}
+
+@keyframes pulse {
+    0%      {box-shadow: 0 0 0 var(--color);}
+    50%     {box-shadow: 0 0 10px var(--color);}
+    100%    {box-shadow: 0 0 0 var(--color);}
+}
