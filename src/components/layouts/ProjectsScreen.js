@@ -1,5 +1,4 @@
 import React, {useState, useContext, useEffect} from 'react'
-import { v4 as id } from 'uuid'
 import styles from './ProjectsScreen.module.css'
 import projects from '../../data/projects'
 import {GlobalContext} from '../../contexts/contexts'
