@@ -38,6 +38,8 @@ const Card = (props) => {
                 <Img className={styles.CardImage} src={props.image} loader={<Spinner />} alt={props.front} />
             </button>
         )
+    
+    //eslint-disable-next-line
     }, [props.image])
 
     return (
