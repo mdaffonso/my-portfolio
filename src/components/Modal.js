@@ -4,14 +4,15 @@ import { GlobalContext } from '../contexts/contexts'
 
 const Modal = () => {
 
-    const { modalAnimate, setModal, modalContent } = useContext(GlobalContext)
+    const { modalAnimate, setModal, modalContent, setModalContent } = useContext(GlobalContext)
     const [modalClass, setModalClass] = useState(styles.OffScreen)
     const [buttonClass, setButtonClass] = useState(styles.OffScreen)
     const [contentClass, setContentClass] = useState(styles.OffScreen)
     const [firstRender, setFirstRender] = useState(true)
 
     const toggleModal = () => {
-        setModal()
+        setModal(current => !current)
+        setModalContent(null)
     }
 
     useEffect(() => {

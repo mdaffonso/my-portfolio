@@ -3,6 +3,7 @@ import { Img } from 'react-image'
 import { GlobalContext } from '../contexts/contexts'
 import styles from './Card.module.css'
 import CardButton from './CardButton'
+import ImageContainer from './ImageContainer'
 import Spinner from './Spinner'
 
 const Card = (props) => {
@@ -22,9 +23,7 @@ const Card = (props) => {
     }
 
     const modalContent = () => (
-        <div className={styles.CardImageContainer}>
-            <Img src={props.imageLarge} className={styles.CardImageLarge} alt={props.back} onClick={e => e.stopPropagation()} loader={<Spinner />} />
-        </div>
+        <ImageContainer src={props.imageLarge} alt={props.back} />
     )
 
     useEffect(() => {

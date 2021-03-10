@@ -1,0 +1,28 @@
+.ImageContainer {
+    position: relative;
+    width: 95vw;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CardImageLarge {
+    position: relative;
+    width: 100%;
+}
+
+@media (min-width: 550px) {
+    .ImageContainer {
+        width: 75vw;
+        height: 95vh;
+    }
+}
+
+@media (orientation: landscape) {
+    .ImageLarge {
+        height: 100%;
+        max-height: 100vh;
+        width: auto;
+    }
+}
