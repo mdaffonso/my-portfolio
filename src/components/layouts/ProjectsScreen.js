@@ -38,7 +38,7 @@ const ProjectsScreen = () => {
                                 image={`./thumb-${item.image}.png`}
                                 imageLarge={`./large-${item.image}.png`}
                                 link={item.live}
-                                key={id()} 
+                                key={item.image} 
                             />
                         ))
                     }

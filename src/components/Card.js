@@ -1,7 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useMemo, useState } from 'react'
+import { Img } from 'react-image'
 import { GlobalContext } from '../contexts/contexts'
 import styles from './Card.module.css'
 import CardButton from './CardButton'
+import Spinner from './Spinner'
 
 const Card = (props) => {
 
@@ -21,7 +23,7 @@ const Card = (props) => {
 
     const modalContent = () => (
         <div className={styles.CardImageContainer}>
-            <img src={props.imageLarge} className={styles.CardImageLarge} alt={props.back} onClick={e => e.stopPropagation()} />
+            <Img src={props.imageLarge} className={styles.CardImageLarge} alt={props.back} onClick={e => e.stopPropagation()} loader={<Spinner />} />
         </div>
     )
 
@@ -30,12 +32,20 @@ const Card = (props) => {
         else setCardClass(styles.Card)
     }, [state])
 
+    const produceImage = useMemo(() => {
+        return(
+            <button className={styles.CardImageButton} onClick={toggleModal}>
+                <Img className={styles.CardImage} src={props.image} loader={<Spinner />} alt={props.front} />
+            </button>
+        )
+    }, [props.image])
+
     return (
         <div className={styles.CardContainer}>
             <div className={cardClass}>
                 <div className={styles.CardFront}>
                     <h2 className={styles.CardTitle}>{props.title}</h2>
-                    { props.image && <button style={{backgroundImage: `url(${props.image})`}} className={styles.CardImage} onClick={toggleModal} /> }
+                    { produceImage }
                     { props.link && <a href={props.link} target='_blank' rel='noreferrer'>{props.link.replaceAll(/https:|\/|www./g, '')}</a>}
                     <p>{ props.front }</p>
 

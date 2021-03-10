@@ -83,11 +83,14 @@
     opacity: 1;
 }
 
-.CardImage {
+.CardImageButton {
     width: 100%;
     height: 50%;
-    background-position: top;
-    background-size: cover;
+
+    background-color: rgb(49, 49, 49);
+
+    position: relative;
+
     margin-bottom: 1rem;
 
     border: none;
@@ -96,6 +99,17 @@
     cursor: pointer;
 
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+
+    overflow: hidden;
+}
+
+.CardImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
 }
 
 .CardImageContainer {

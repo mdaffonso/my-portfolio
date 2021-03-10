@@ -1,9 +1,10 @@
 import React, {useState, useContext, useEffect} from 'react'
-import { v4 as id } from 'uuid'
 import styles from './ContactScreen.module.css'
 import contact from '../../data/contact'
 import {GlobalContext} from '../../contexts/contexts'
 import parse from 'html-react-parser'
+import { Img } from 'react-image'
+import SmallSpinner from '../SmallSpinner'
 
 const ContactScreen = () => {
 
@@ -32,9 +33,9 @@ const ContactScreen = () => {
 
                 <div className={styles.SocialMedia}>
                     {data.content.links.map(entry => (
-                        <div key={id()} className={styles.LinkContainer}>
+                        <div key={entry.icon} className={styles.LinkContainer}>
                             <a href={entry.href} target='_blank' rel='noreferrer' aria-label={entry.name}>
-                                <img src={`./cont-${entry.icon}.png`} alt={entry.name} />
+                                <Img src={`./cont-${entry.icon}.png`} alt={entry.name} loader={<SmallSpinner />} />
                             </a>
                         </div>
                     ))}
