@@ -7,9 +7,9 @@
     align-items: center;
 }
 
-.CardImageLarge {
+.ImageLarge {
     position: relative;
-    width: 100%;
+    width: 95%;
 }
 
 @media (min-width: 550px) {

@@ -41,7 +41,7 @@
 }
 
 .Active::after {
-    animation: bounce 1.6s ease-in-out forwards;
+    animation: bounce 1.4s ease-in-out forwards;
 }
 
 .Inactive {
