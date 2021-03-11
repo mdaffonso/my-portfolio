@@ -1,6 +1,8 @@
 .LanguageButton {
     position: relative;
 
+    width: 30px;
+    height: 30px;
     width: clamp(25px, 3vw, 40px);
     height: clamp(25px, 3vw, 40px);
 
