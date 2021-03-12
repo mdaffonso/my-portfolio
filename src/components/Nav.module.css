@@ -18,7 +18,7 @@
         transform 100ms ease-in-out,
         opacity 200ms linear;
 
-    z-index: 2000;
+    z-index: 20000;
 }
 
 .Nav::after {

@@ -19,6 +19,8 @@
 
     background-color: white;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+
+    transition: box-shadow 100ms linear;
 }
 
 .MenuActivation::before {
@@ -39,6 +41,10 @@
 .MenuActivation:focus,
 .MenuActivation:active {
     outline: none;
+}
+
+.MenuActivation:focus {
+    box-shadow: 0 0 0 0.25rem rgb(60, 107, 7);
 }
 
 @keyframes pulse {

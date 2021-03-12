@@ -35,6 +35,7 @@
 .ButtonPlus:focus,
 .ButtonMinus:focus {
     outline: none;
+    background: rgb(92, 203, 255);
 }
 
 .ButtonPlus {

@@ -6,7 +6,7 @@ const LanguageButton = (props) => {
     const {globals} = useContext(GlobalContext)
 
     return (
-        <button className={styles.LanguageButton} aria-label={globals.language.descriptor} {...props}>
+        <button tabIndex={-1} className={styles.LanguageButton} aria-label={globals.language.descriptor} {...props}>
             {globals.language.identifier}
         </button>
     )
