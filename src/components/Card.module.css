@@ -55,14 +55,14 @@
     grid-template-rows: 1fr min-content;
     grid-gap: 0.5rem;
 
-    color: white;
-    background-color: rgb(15, 141, 101);
+    /* color: white;
+    background-color: rgb(15, 141, 101); */
     border-radius: 5px 5px 5px 20px;
     transform: rotateY(.5turn);
 }
 
 .CardBackTechnologies {
-    color: #7fffca;
+    color: #8f8f8f;
 }
 
 .CardFront a,

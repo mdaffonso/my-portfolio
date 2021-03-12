@@ -44,7 +44,7 @@ const projects = [
                     title: "Item Generator",
                     live: "https://item-generator.herokuapp.com/",
                     image: "ig",
-                    front: "A progressive web app for tabletop RPG players.",
+                    front: "A PWA for tabletop RPG players.",
                     back: "A simple personal project made to do some experimentation with React-Query and service workers. Every entry is randomly fetched from a MongoDB collection.",
                     technologies: {
                         title: "Technologies employed:",
@@ -139,7 +139,7 @@ const projects = [
                     title: "Item Generator",
                     live: "https://item-generator.herokuapp.com/",
                     image: "ig",
-                    front: "Uma aplicação de web progressiva para jogadores de RPG de mesa.",
+                    front: "Uma PWA para jogadores de RPG de mesa.",
                     back: "Um projeto pessoal simples, que desenvolvi para experimentar com React-Query e service workers. Cada item é buscado aleatoriamente de uma coleção em MongoDB.",
                     technologies: {
                         title: "Tecnologias utilizadas:",
