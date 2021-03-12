@@ -26,6 +26,7 @@
     cursor: pointer;
 
     overflow: hidden;
+    transition: background-color 150ms ease-in-out;
 }
 
 .ButtonFlip {
@@ -36,8 +37,13 @@
 .ButtonMinus:focus {
     outline: none;
     background: rgb(92, 203, 255);
-    transform: translateY(-2px);
-    box-shadow: 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ButtonPlus:active,
+.ButtonMinus:active {
+    transform: translateY(1px);
+    background:rgb(140, 216, 25);
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .ButtonPlus {
