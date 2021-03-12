@@ -49,21 +49,13 @@
 }
 
 .Menu::before,
-.Language::before,
 .Active::before {
+    content: attr(data-title);
     font-size: 3em;
     text-transform: uppercase;
     color: white;
     padding: 0.5rem;
     margin-bottom: 3rem;
-}
-
-.Menu::before {
-    content: 'menu';
-}
-
-.Language::before {
-    content: attr(data-language);
 }
 
 @keyframes show {

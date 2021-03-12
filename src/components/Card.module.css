@@ -94,6 +94,13 @@
     text-decoration: underline;
 }
 
+.CardFront a:focus,
+.CardBack a:focus {
+    outline: none;
+    color: rgb(31, 109, 199);
+    font-weight: 600;
+}
+
 .CardFront a:hover::before,
 .CardBack a:hover::before {
     transform: translateX(-1.5rem);
@@ -118,6 +125,10 @@
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
 
     overflow: hidden;
+}
+
+.CardImageButton:focus {
+    box-shadow: 0 0 0 5px black;
 }
 
 .CardImage {

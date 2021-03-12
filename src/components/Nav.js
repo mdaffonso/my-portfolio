@@ -10,26 +10,31 @@ import { GlobalContext } from '../contexts/contexts'
 const Nav = () => {
     const global = useContext(GlobalContext)
 
+    const [navSwitch, setNavSwitch] = useState('')
     const [active, setActive] = useState(true)
     const [language, setLanguage] = useState(global.globals.language.identifier)
     const [navStyles, setNavStyles] = useState(`${styles.Nav} ${styles.Menu}`)
-    const [languageStyles, setLanguageStyles] = useState(`${styles.Nav} ${styles.Language}`)
 
-    const toggleMenu = useCallback(() => {
+    const activateOverlay = useCallback(() => {
         const activeStyle = `${styles.Nav} ${styles.Menu} ${styles.Active}`
         const inactiveStyle = `${styles.Nav} ${styles.Menu} ${styles.Inactive}`
         setActive(current => !current)
         if(active) setNavStyles(activeStyle)
-        else setNavStyles(inactiveStyle)
+        else {
+            setNavStyles(inactiveStyle)
+            setNavSwitch('')
+        }
     }, [active, setNavStyles])
 
+    const toggleMenu = useCallback(() => {
+        setNavSwitch('menu')
+        activateOverlay()
+    }, [setNavSwitch, activateOverlay])
+
     const toggleLanguage = useCallback(() => {
-        const activeStyle = `${styles.Nav} ${styles.Language} ${styles.Active}`
-        const inactiveStyle = `${styles.Nav} ${styles.Language} ${styles.Inactive}`
-        setActive(current => !current)
-        if(active) setLanguageStyles(activeStyle)
-        else setLanguageStyles(inactiveStyle)
-    }, [active, setLanguageStyles])
+        setNavSwitch(global.globals.language.menuTitle)
+        activateOverlay()
+    }, [setNavSwitch, activateOverlay, global])
 
     const closeMenuByEsc = useCallback((e) => {
         if(e.which === 27 && !active) {
@@ -53,23 +58,21 @@ const Nav = () => {
         <>
             {active && (
                 <NavButtons>
-                    <LanguageButton onClick={toggleLanguage} />
-                    <MenuActivation onClick={toggleMenu} />
+                    <LanguageButton onClick={toggleLanguage} tabIndex={active !== true ? -1 : 1} />
+                    <MenuActivation onClick={toggleMenu} tabIndex={active !== true ? -1 : 2} />
                 </NavButtons>
             )}
 
-            <nav className={languageStyles} data-language={global.globals.language.menuTitle} onClick={toggleLanguage}>
-                {
+            <nav className={navStyles} data-title={navSwitch} onClick={toggleLanguage}>
+                { navSwitch === global.globals.language.menuTitle &&
                     global.globals.languages.map(language => (
-                        <LanguageLink to='#' key={language.identifier} onClick={() => setLanguage(language.identifier)} identifier={language.identifier} descriptor={language.descriptor} />
+                        <LanguageLink to='#' key={language.identifier} onClick={() => setLanguage(language.identifier)} identifier={language.identifier} descriptor={language.descriptor} tabIndex={0} />
                     ))
                 }
-            </nav>
 
-            <nav className={navStyles} onClick={toggleMenu}>
-                {
+                { navSwitch === 'menu' &&
                     global.links.map(link => (
-                        <NavLink to={link.to} title={link.title} icon={link.icon} key={link.uid} uid={link.uid} active={global.activeLink === link.uid} setActive={global.setActive} />
+                        <NavLink to={link.to} title={link.title} icon={link.icon} key={link.uid} uid={link.uid} active={global.activeLink === link.uid} setActive={global.setActive} tabIndex={0} />
                     )
                 )}
             </nav>
