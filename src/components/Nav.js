@@ -58,8 +58,8 @@ const Nav = () => {
         <>
             {active && (
                 <NavButtons>
-                    <LanguageButton onClick={toggleLanguage} tabIndex={active !== true ? -1 : 1} />
-                    <MenuActivation onClick={toggleMenu} tabIndex={active !== true ? -1 : 2} />
+                    <LanguageButton onClick={toggleLanguage} tabIndex={active !== true ? -1 : 2} />
+                    <MenuActivation onClick={toggleMenu} tabIndex={active !== true ? -1 : 3} />
                 </NavButtons>
             )}
 

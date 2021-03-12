@@ -17,6 +17,7 @@ import AboutScreen from './components/layouts/AboutScreen'
 import ProjectsScreen from './components/layouts/ProjectsScreen';
 import ContactScreen from './components/layouts/ContactScreen';
 import NotFoundScreen from './components/layouts/NotFoundScreen';
+import SkipNavigation from './components/SkipNavigation';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
   return (
     <BrowserRouter>
       <GlobalContext.Provider value={{globals, setLanguage, mutateData, toggleLoading, modalContent, setModalContent, modalAnimate, setModal, setActive, activeLink: active, links: globals.sections}}>
+        <SkipNavigation />
         <MainStructure>
           <Switch>
             <Route path='/projects' component={ProjectsScreen} />

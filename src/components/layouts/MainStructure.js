@@ -9,7 +9,7 @@ const MainStructure = ({children}) => {
     return (
         <div className={styles.MainStructure}>
             <Nav />
-            <main>
+            <main id='main'>
                 {children}
             </main>
             <Modal />

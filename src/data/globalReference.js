@@ -8,7 +8,7 @@ const globalReference = {
         about: '/about',
         projects: '/projects',
         contact: '/contact',
-    },
+    }
 }
 
 export default globalReference

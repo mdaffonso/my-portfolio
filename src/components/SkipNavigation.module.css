@@ -1,0 +1,24 @@
+.SkipNavigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: 1rem;
+    background: black;
+    color: white;
+
+    transform: translateY(-100%);
+
+    transition: transform 150ms ease-in-out;
+
+    border-radius: 0 0 5px 0;
+}
+
+.SkipNavigation:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px white;
+}
+
+.In {
+    transform: translateY(0);
+}

@@ -21,12 +21,19 @@
     background-color: rgb(255, 243, 188);
 
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+
+    transition: box-shadow 100ms linear;
 }
 
 .LanguageButton:focus,
 .LanguageButton:active {
     outline: none;
-    box-shadow: 0 0 0 0.25rem rgb(60, 107, 7);
+}
+
+.LanguageButton:focus {
+    box-shadow: 
+        1px 1px 3px rgba(0, 0, 0, 0.2),
+        0 0 0 0.25rem rgb(97, 163, 21);
 }
 
 @media (min-width: 550px) {

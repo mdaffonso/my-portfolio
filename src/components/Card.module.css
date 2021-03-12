@@ -39,6 +39,9 @@
 
     padding: 2rem;
 
+    background-color: white;
+    color: black;
+
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
 

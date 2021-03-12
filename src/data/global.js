@@ -8,6 +8,7 @@ const global = [
             text: 'Loading content...',
         },
         language: {
+            skip: 'skip to content',
             menuTitle: 'language',
             identifier: 'en',
             descriptor: 'english',
@@ -26,6 +27,7 @@ const global = [
             text: 'Carregando conteúdo...',
         },
         language: {
+            skip: 'pular para o conteúdo',
             menuTitle: 'idioma',
             identifier: 'pt',
             descriptor: 'português',
