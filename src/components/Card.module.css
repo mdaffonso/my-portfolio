@@ -3,6 +3,7 @@
     flex-basis: 300px;
     flex-grow: 0;
     flex-shrink: 1;
+    margin-bottom: 2rem;
 }
 
 .Card {
@@ -143,8 +144,8 @@
     100% { transform: translateY(-100%); }
 }
 
-@supports not (gap: 1rem) {
+@media (min-width: 550px) {
     .CardContainer {
-        margin: 0.5rem;
+        margin: 1rem;
     }
 }
