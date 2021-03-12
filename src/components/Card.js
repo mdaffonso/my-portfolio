@@ -53,7 +53,6 @@ const Card = (props) => {
                     <CardButton onClick={flip}>+</CardButton>
                 </div>
 
-                <div className={styles.CardBackBackground} />
                 <div className={styles.CardBack}>
                     <p>{props.back}</p>
                     <p className={styles.CardBackTechnologies}>{props.technologies.title} {props.technologies.list.join(', ')}</p>

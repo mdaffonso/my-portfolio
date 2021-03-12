@@ -47,3 +47,9 @@
         transform: translateX(50%) translateY(0);
     }
 }
+
+@supports not (gap: 1rem) {
+    .NavButtons button {
+        margin: 0.25rem;
+    }
+}

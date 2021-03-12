@@ -122,18 +122,15 @@
 
 .CardBack {
     color: white;
-    transform: rotateY(.5turn) translateZ(100px);
-}
-
-.CardBackBackground {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgb(15 141 101);
+    background-color: rgb(15, 141, 101);
     border-radius: 5px 5px 5px 20px;
     transform: rotateY(.5turn);
+}
+
+.CardBack p,
+.CardBack div,
+.CardBack button {
+    transform: translateZ(100px);
 }
 
 .CardTitle {
@@ -144,4 +141,10 @@
 @keyframes pull {
     0%   { transform: translateY(0); }
     100% { transform: translateY(-100%); }
+}
+
+@supports not (gap: 1rem) {
+    .CardContainer {
+        margin: 0.5rem;
+    }
 }
