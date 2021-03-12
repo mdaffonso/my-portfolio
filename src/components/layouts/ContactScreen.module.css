@@ -25,9 +25,12 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 0.5rem;
     opacity: 0;
     animation: show 300ms 200ms ease-in-out forwards;
+}
+
+.LinkContainer {
+    margin: 0.3rem;
 }
 
 .LinkContainer a {

@@ -36,7 +36,12 @@
 
     padding: 2rem;
 
-    transform: translateZ(100px);
+    transform-style: preserve-3d;
+
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .CardBack {
@@ -128,15 +133,18 @@
     transform: rotateY(.5turn);
 }
 
-.CardBack p,
-.CardBack div,
-.CardBack button {
-    transform: translateZ(100px);
-}
-
-.CardTitle {
+.CardFrontTitle {
     font-family: 'Oswald', sans-serif;
     margin: 0 0 0.5em 0;
+}
+
+.CardFrontTitle,
+.CardFrontText,
+.CardFrontLink,
+.CardImageButton,
+.CardBack p,
+.CardBack button {
+    transform: translateZ(5rem);
 }
 
 @keyframes pull {

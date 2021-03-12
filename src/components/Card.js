@@ -45,10 +45,10 @@ const Card = (props) => {
         <div className={styles.CardContainer}>
             <div className={cardClass}>
                 <div className={styles.CardFront}>
-                    <h2 className={styles.CardTitle}>{props.title}</h2>
+                    <h2 className={styles.CardFrontTitle}>{props.title}</h2>
                     { produceImage }
-                    { props.link && <a href={props.link} target='_blank' rel='noreferrer'>{props.link.replaceAll(/https:|\/|www./g, '')}</a>}
-                    <p>{ props.front }</p>
+                    { props.link && <a className={styles.CardFrontLink} href={props.link} target='_blank' rel='noreferrer'>{props.link.replace(/https:|\/|www./g, '')}</a>}
+                    <p className={styles.CardFrontText}>{ props.front }</p>
 
                     <CardButton onClick={flip}>+</CardButton>
                 </div>

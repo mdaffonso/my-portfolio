@@ -5,6 +5,8 @@
 .MenuActivation {
     position: relative;
 
+    margin: 0.25rem;
+
     height: 40px;
     width: 40px;
     width: clamp(40px, 5vw, 70px);
