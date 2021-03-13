@@ -22,9 +22,9 @@ const ProjectsScreen = () => {
             <section className={styles.ProjectsScreen}>
                 <h1 className={styles.Title}>{data?.title}</h1>
                 
-                <div className={styles.Intro}>
+                <p className={styles.Intro}>
                     {data?.content.intro}
-                </div>
+                </p>
 
                 <div className={styles.Cards}>
                     {

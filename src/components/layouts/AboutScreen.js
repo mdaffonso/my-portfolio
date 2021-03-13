@@ -19,18 +19,18 @@ const AboutScreen = () => {
     return (
         !globals.loading.status && ( 
             <section className={styles.AboutScreen}>
-                <div className={styles.Titles}>
+                <header className={styles.Titles}>
                     <h1 className={styles.Title}>{data?.title}</h1>
                     <h3 className={styles.Subtitle}>{data?.subtitle}</h3>
-                </div>
+                </header>
                 
-                <div className={styles.Intro}>
+                <p className={styles.Intro}>
                     {data?.content.intro}
-                </div>
+                </p>
 
-                <div className={styles.ExtraContent}>
+                <p className={styles.ExtraContent}>
                     {data?.content.extra}
-                </div>
+                </p>
             </section>
         )
     )

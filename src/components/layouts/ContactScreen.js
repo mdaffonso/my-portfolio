@@ -24,12 +24,12 @@ const ContactScreen = () => {
             <section className={styles.ContactScreen}>
                 <h1 className={styles.Title}>{data?.title}</h1>
                 
-                <div className={styles.Intro}>
+                <p className={styles.Intro}>
                     {parse(data.content.intro.text
                         .replace(/\[email]/, `<a href="mailto:${data.content.intro.email}">${data.content.intro.email}</a>`)
                         .replace(/\[phone]/, `<span class=${styles.Phone}>${data.content.intro.phone}</span>`)
                     )}
-                </div>
+                </p>
 
                 <div className={styles.SocialMedia}>
                     {data.content.links.map(entry => (

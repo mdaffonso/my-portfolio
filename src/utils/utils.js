@@ -21,3 +21,7 @@ export const throttle = (func, limit=1000) => {
         }
     }
 }
+
+export const blurFocus = () => {
+    document.activeElement.blur()
+}

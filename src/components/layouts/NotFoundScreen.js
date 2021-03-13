@@ -21,9 +21,9 @@ const NotFoundScreen = () => {
             <section className={styles.NotFoundScreen}>
                 <h1 className={styles.Title}>{data?.title}</h1>
 
-                <div className={styles.Content}>
+                <p className={styles.Content}>
                     {data?.content}
-                </div>
+                </p>
             </section>
         )
     )
