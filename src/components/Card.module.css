@@ -53,6 +53,10 @@
     backface-visibility: hidden;
 }
 
+.CardFront {
+    border-radius: 5px 5px 20px 5px;
+}
+
 .CardBack {
     display: grid;
     grid-template-rows: 1fr min-content;
