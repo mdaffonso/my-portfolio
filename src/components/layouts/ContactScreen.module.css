@@ -31,6 +31,7 @@
 
 .LinkContainer {
     margin: 0.3rem;
+    position: relative;
 }
 
 .LinkContainer a {
@@ -40,7 +41,14 @@
 
 .LinkContainer a:focus {
     outline: none;
-    filter: brightness(1.5) contrast(80%);
+    z-index: 100;
+}
+
+.LinkContainer a:focus img {
+    box-shadow: 
+        1px 3px rgba(0, 0, 0, 0.144),
+        0 0 0 0.5rem rgba(240,205,7,1),
+        0 0 0 1.5rem rgb(143, 62, 0);
 }
 
 .LinkContainer:hover img {

@@ -25,6 +25,11 @@ const contact = [
                     icon: "wapp",
                     href: "https://wa.me/5551993868729?text=Hi! I would like to hire you!",
                 },
+                { 
+                    name: "github",
+                    icon: "ghub",
+                    href: "https://github.com/mdaffonso",
+                },
             ]
         },
     },
@@ -53,6 +58,11 @@ const contact = [
                     name: "whatsapp",
                     icon: "wapp",
                     href: "https://wa.me/5551993868729?text=Oi! Eu quero te contratar!",
+                },
+                { 
+                    name: "github",
+                    icon: "ghub",
+                    href: "https://github.com/mdaffonso",
                 },
             ]
         },
