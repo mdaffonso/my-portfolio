@@ -1,12 +1,10 @@
-const projects = [
-    {
+const projects = [{
         sectionId: "projects",
         language: "en",
         title: "Projects",
         content: {
             intro: "On the cards below, you will find information about some of the projects I have worked on in the year of 2020. The green button on the bottom-right corner of each card displays more information, including the technologies utilized.",
-            body: [
-                {
+            body: [{
                     title: "The Kira Justice",
                     live: "https://www.thekirajustice.com.br/",
                     image: "tkj",
@@ -15,10 +13,10 @@ const projects = [
                     technologies: {
                         title: "Technologies employed:",
                         list: [
-                            "html5", 
-                            "css3", 
-                            "javascript", 
-                            "php", 
+                            "html5",
+                            "css3",
+                            "javascript",
+                            "php",
                             "mysql"
                         ]
                     }
@@ -32,10 +30,10 @@ const projects = [
                     technologies: {
                         title: "Technologies employed:",
                         list: [
-                            "html5", 
-                            "css3", 
-                            "javascript", 
-                            "php", 
+                            "html5",
+                            "css3",
+                            "javascript",
+                            "php",
                             "mysql"
                         ]
                     }
@@ -49,8 +47,8 @@ const projects = [
                     technologies: {
                         title: "Technologies employed:",
                         list: [
-                            "html5", 
-                            "css3", 
+                            "html5",
+                            "css3",
                             "javascript",
                             "react",
                             "nodejs",
@@ -66,28 +64,28 @@ const projects = [
                     technologies: {
                         title: "Technologies employed:",
                         list: [
-                            "html5", 
-                            "css3", 
+                            "html5",
+                            "css3",
                             "javascript",
                             "react"
                         ]
                     }
                 },
                 {
-                    title: "Brunna Moda Íntima",
-                    image: "bmi",
-                    front: "An ecommerce for an underwear store.",
-                    back: "The client required an ecommerce both flexible and with plenty of features. This is still a work in progress, and it currently doesn't have a live version.",
+                    title: "Letmeask",
+                    image: "lma",
+                    live: "https://letmeask-7e901.web.app/",
+                    front: "A real-time Q&A web app.",
+                    back: "A React web application developed during Rocketseat's June 2021 Next Level Week. It was created as a tool to help streamers and live-broadcasters engage with their audience.",
                     technologies: {
                         title: "Technologies employed:",
                         list: [
-                            "html5", 
-                            "css3", 
+                            "html5",
+                            "css3",
                             "javascript",
-                            "nodejs",
-                            "mongodb",
-                            "react",
-                            "redux"
+                            "typescript",
+                            "firebase",
+                            "react"
                         ]
                     }
                 },
@@ -100,8 +98,7 @@ const projects = [
         title: "Projetos",
         content: {
             intro: "Nos cards abaixo, você encontrará informações sobre alguns dos projetos nos quais eu trabalhei em 2020. O botão verde no canto inferior direito de cada card fornece maiores informações sobre o projeto, incluindo as tecnologias utilizadas.",
-            body: [
-                {
+            body: [{
                     title: "The Kira Justice",
                     live: "https://www.thekirajustice.com.br/",
                     image: "tkj",
@@ -110,10 +107,10 @@ const projects = [
                     technologies: {
                         title: "Tecnologias utilizadas:",
                         list: [
-                            "html5", 
-                            "css3", 
-                            "javascript", 
-                            "php", 
+                            "html5",
+                            "css3",
+                            "javascript",
+                            "php",
                             "mysql"
                         ]
                     }
@@ -127,10 +124,10 @@ const projects = [
                     technologies: {
                         title: "Tecnologias utilizadas:",
                         list: [
-                            "html5", 
-                            "css3", 
-                            "javascript", 
-                            "php", 
+                            "html5",
+                            "css3",
+                            "javascript",
+                            "php",
                             "mysql"
                         ]
                     }
@@ -144,8 +141,8 @@ const projects = [
                     technologies: {
                         title: "Tecnologias utilizadas:",
                         list: [
-                            "html5", 
-                            "css3", 
+                            "html5",
+                            "css3",
                             "javascript",
                             "react",
                             "nodejs",
@@ -161,28 +158,28 @@ const projects = [
                     technologies: {
                         title: "Tecnologias utilizadas:",
                         list: [
-                            "html5", 
-                            "css3", 
+                            "html5",
+                            "css3",
                             "javascript",
                             "react"
                         ]
                     }
                 },
                 {
-                    title: "Brunna Moda Íntima",
-                    image: "bmi",
-                    front: "E-commerce para uma loja de moda íntima.",
-                    back: "O cliente necessitava de uma plataforma de e-commerce ao mesmo tempo flexível e com inúmeros recursos. Este projeto ainda está em fase de desenvolvimento, não contando, no momento, com uma versão online.",
+                    title: "Letmeask",
+                    image: "lma",
+                    live: "https://letmeask-7e901.web.app/",
+                    front: "Aplicação de web de perguntas e respostas.",
+                    back: "Uma aplicação de web em React desenvolvida durante a Next Level Week da Rocketseat de junho de 2021. Foi criada como uma ferramenta para auxiliar streamers e produtores de conteúdo ao vivo a engajar com a sua audiência.",
                     technologies: {
                         title: "Tecnologias utilizadas:",
                         list: [
-                            "html5", 
-                            "css3", 
+                            "html5",
+                            "css3",
                             "javascript",
-                            "nodejs",
-                            "mongodb",
-                            "react",
-                            "redux"
+                            "typescript",
+                            "firebase",
+                            "react"
                         ]
                     }
                 },
