@@ -75,6 +75,8 @@ const Nav = () => {
                         <NavLink to={link.to} title={link.title} icon={link.icon} key={link.uid} uid={link.uid} active={global.activeLink === link.uid} setActive={global.setActive} tabIndex={0} />
                     )
                 )}
+
+                <button aria-label={global.globals.language.closeButton}>&times;</button>
             </nav>
         </>
     )

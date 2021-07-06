@@ -10,8 +10,8 @@ const global = [
         language: {
             skip: 'skip to content',
             menuTitle: 'language',
-            identifier: 'en',
-            descriptor: 'english',
+            closeButton: 'close menu',
+            ...languages[0]
         },
         languages: languages,
         sections: [
@@ -29,8 +29,8 @@ const global = [
         language: {
             skip: 'pular para o conteúdo',
             menuTitle: 'idioma',
-            identifier: 'pt',
-            descriptor: 'português',
+            closeButton: 'fechar menu',
+            ...languages[1]
         },
         languages: languages,
         sections: [

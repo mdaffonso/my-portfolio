@@ -3,6 +3,7 @@ import styles from './ProjectsScreen.module.css'
 import projects from '../../data/projects'
 import {GlobalContext} from '../../contexts/contexts'
 import Card from '../Card'
+import { Helmet } from 'react-helmet-async'
 
 const ProjectsScreen = () => {
 
@@ -19,30 +20,38 @@ const ProjectsScreen = () => {
 
     return (
         !globals.loading.status && ( 
-            <section className={styles.ProjectsScreen}>
-                <h1 className={styles.Title}>{data?.title}</h1>
-                
-                <p className={styles.Intro}>
-                    {data?.content.intro}
-                </p>
+            <>
+                <Helmet>
+                    <title>
+                        {data?.title} | Matheus Affonso
+                    </title>
+                </Helmet>
 
-                <div className={styles.Cards}>
-                    {
-                        data?.content?.body.map(item => (
-                            <Card 
-                                title={item.title} 
-                                front={item.front} 
-                                back={item.back} 
-                                technologies={item.technologies}
-                                image={`./thumb-${item.image}.png`}
-                                imageLarge={`./large-${item.image}.png`}
-                                link={item.live}
-                                key={item.image} 
-                            />
-                        ))
-                    }
-                </div>
-            </section>
+                <section className={styles.ProjectsScreen}>
+                    <h1 className={styles.Title}>{data?.title}</h1>
+                    
+                    <p className={styles.Intro}>
+                        {data?.content.intro}
+                    </p>
+
+                    <div className={styles.Cards}>
+                        {
+                            data?.content?.body.map(item => (
+                                <Card 
+                                    title={item.title} 
+                                    front={item.front} 
+                                    back={item.back} 
+                                    technologies={item.technologies}
+                                    image={`./thumb-${item.image}.png`}
+                                    imageLarge={`./large-${item.image}.png`}
+                                    link={item.live}
+                                    key={item.image} 
+                                />
+                            ))
+                        }
+                    </div>
+                </section>
+            </>
         )
     )
 }

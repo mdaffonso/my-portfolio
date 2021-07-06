@@ -21,31 +21,50 @@
     z-index: 20000;
 }
 
-.Nav::after {
+.Nav button {
     content: '\00d7';
     position: fixed;
     bottom: 60px;
     right: 25px;
 
-    font-size: 3em;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+
+    width: 1.5em;
+    height: 1.5em;
+
+    font-size: 3rem;
     color: white;
     font-weight: 600;
 
     cursor: pointer;
 
     transform-origin: center right;
+
+    transition: box-shadow 150ms linear;
+}
+
+.Nav button:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.5rem rgba(240,205,7,1);
 }
 
 .Active {
     animation: show 100ms ease-in-out forwards;
 }
 
-.Active::after {
+.Active button {
     animation: bounce 1.4s ease-in-out forwards;
 }
 
 .Inactive {
     animation: hide 100ms ease-in-out forwards;
+}
+
+.Inactive button {
+    display: none;
+    pointer-events: none;
 }
 
 .Menu::before,
@@ -86,7 +105,7 @@
         transform: translateY(100%) scale(0);
     }
 
-    .Nav::after {
+    .Nav button {
         --tX: translateX(50%);
         right: 50%;
         transform: translateX(50%);
