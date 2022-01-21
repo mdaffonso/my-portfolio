@@ -89,9 +89,61 @@ const projects = [{
                         ]
                     }
                 },
+
+                {
+                    title: "Todobedoo!",
+                    image: "tdbd",
+                    live: "https://mdaffonso.github.io/frontend2/todobedoo/",
+                    front: "A simple to-do app with only vanilla Javascript.",
+                    back: "A to-do app developed using exclusively vanilla Javascript, HTML and CSS. It was made as an exercise for building a simple SPA without using front end frameworks and consuming an external API.",
+                    technologies: {
+                        title: "Technologies employed:",
+                        list: [
+                            "html5",
+                            "css3",
+                            "javascript"
+                        ]
+                    }
+                },
+
+                {
+                    title: "Memory Cards",
+                    image: "mc",
+                    live: "https://mdaffonso.github.io/frontend2/memorycards/",
+                    front: "An accessibility-focused flash cards app.",
+                    back: "A flash cards app developed using vanilla Javascript, HTML and CSS (with SASS). It focuses on accessibility, and can be utilized solely with a keyboard.",
+                    technologies: {
+                        title: "Technologies employed:",
+                        list: [
+                            "html5",
+                            "css3",
+                            "sass",
+                            "javascript"
+                        ]
+                    }
+                },
+
+                {
+                    title: "Jokenpo",
+                    image: "jkp",
+                    live: "https://mdaffonso.github.io/frontend2/jokenpo/",
+                    front: "It's rock, paper, scissors. Simple and straightforward.",
+                    back: "A fully responsive rock, paper, scissors game, made with vanilla Javascript, HTML and CSS (with SASS).",
+                    technologies: {
+                        title: "Technologies employed:",
+                        list: [
+                            "html5",
+                            "css3",
+                            "sass",
+                            "javascript"
+                        ]
+                    }
+                }
             ],
         },
     },
+
+
     {
         sectionId: "projects",
         language: "pt",
@@ -183,6 +235,56 @@ const projects = [{
                         ]
                     }
                 },
+
+                {
+                    title: "Todobedoo!",
+                    image: "tdbd",
+                    live: "https://mdaffonso.github.io/frontend2/todobedoo/",
+                    front: "Um aplicativo simples de tarefas feito com Javascript puro.",
+                    back: "Um aplicativo de tarefas desenvolvido com Javascript puro, HTML e CSS. Foi feito como um exercício para criar uma SPA simples sem frameworks e consumindo uma API externa.",
+                    technologies: {
+                        title: "Tecnologias utilizadas:",
+                        list: [
+                            "html5",
+                            "css3",
+                            "javascript"
+                        ]
+                    }
+                },
+
+                {
+                    title: "Memory Cards",
+                    image: "mc",
+                    live: "https://mdaffonso.github.io/frontend2/memorycards/",
+                    front: "Um app de flash cards focado em acessibilidade.",
+                    back: "Um app de flash cards desenvolvido utilizando Javascript, HTML e CSS (com SASS). Tem foco em acessibilidade, e pode ser inteiramente utilizado com um teclado.",
+                    technologies: {
+                        title: "Tecnologias utilizadas:",
+                        list: [
+                            "html5",
+                            "css3",
+                            "sass",
+                            "javascript"
+                        ]
+                    }
+                },
+
+                {
+                    title: "Jokenpo",
+                    image: "jkp",
+                    live: "https://mdaffonso.github.io/frontend2/jokenpo/",
+                    front: "É pedra, papel e tesoura. Simples e direto.",
+                    back: "Pedra, papel e tesoura, feito completamente em Javascript, HTML e CSS (com SASS).",
+                    technologies: {
+                        title: "Tecnologias utilizadas:",
+                        list: [
+                            "html5",
+                            "css3",
+                            "sass",
+                            "javascript"
+                        ]
+                    }
+                }
             ],
         },
     }

@@ -47,7 +47,7 @@ const Card = (props) => {
                 <div className={styles.CardFront}>
                     <h2 className={styles.CardFrontTitle}>{props.title}</h2>
                     { produceImage }
-                    { props.link && <a className={styles.CardFrontLink} href={props.link} target='_blank' rel='noreferrer'>{props.link.replace(/https:|\/|www./g, '')}</a>}
+                    { props.link && <a className={styles.CardFrontLink} href={props.link} target='_blank' rel='noreferrer'>Visitar o site</a>}
                     <p className={styles.CardFrontText}>{ props.front }</p>
 
                     <CardButton onClick={flip}>+</CardButton>
