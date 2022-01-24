@@ -23,7 +23,6 @@ const projects = [{
                 },
                 {
                     title: "Empório da Lasanha",
-                    live: "https://www.emporiodalasanha.com.br/",
                     image: "edl",
                     front: "Website for food delivery business.",
                     back: "The client requested an online menu with a short description for every item, as well as a phone and WhatsApp order system. Aside from one external service that requires javascript and the admin dashboard, the landing page was built solely with HTML and CSS.",
@@ -169,7 +168,6 @@ const projects = [{
                 },
                 {
                     title: "Empório da Lasanha",
-                    live: "https://www.emporiodalasanha.com.br/",
                     image: "edl",
                     front: "Site para empresa de delivery de lasanhas congeladas.",
                     back: "O cliente precisava de um menu virtual, com uma curta descrição de cada item, além de um sistema de pedidos via WhatsApp. Com a exceção de um serviço externo que utiliza javascript, e do painel de controle, a landing page foi construída exclusivamente com HTML e CSS.",
