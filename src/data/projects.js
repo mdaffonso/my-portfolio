@@ -22,6 +22,22 @@ const projects = [{
                     }
                 },
                 {
+                    title: "Cryptaid",
+                    live: "https://cryptaid.vercel.app",
+                    image: "cryp",
+                    front: "Digital aid for the Cryptid board game.",
+                    back: "This is a progressive web app made with Vue. It's a digital aid for the Cryptid board game made for mobile.",
+                    technologies: {
+                        title: "Technologies employed:",
+                        list: [
+                            "vue",
+                            "html5",
+                            "css3",
+                            "javascript"
+                        ]
+                    }
+                },
+                {
                     title: "Empório da Lasanha",
                     image: "edl",
                     front: "Website for food delivery business.",
@@ -166,6 +182,24 @@ const projects = [{
                         ]
                     }
                 },
+
+                {
+                    title: "Cryptaid",
+                    live: "https://cryptaid.vercel.app",
+                    image: "cryp",
+                    front: "Auxílio digital para o jogo de tabuleiro Cryptid.",
+                    back: "Um aplicativo de web progressivo feito com Vue. Um auxílio digital para o jogo de tabuleiro Cryptid feito principalmente para mobile.",
+                    technologies: {
+                        title: "Technologies employed:",
+                        list: [
+                            "vue",
+                            "html5",
+                            "css3",
+                            "javascript"
+                        ]
+                    }
+                },
+
                 {
                     title: "Empório da Lasanha",
                     image: "edl",
