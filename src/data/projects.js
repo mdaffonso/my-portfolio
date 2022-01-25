@@ -26,11 +26,13 @@ const projects = [{
                     live: "https://cryptaid.vercel.app",
                     image: "cryp",
                     front: "Digital aid for the Cryptid board game.",
-                    back: "This is a progressive web app made with Vue. It's a digital aid for the Cryptid board game made for mobile.",
+                    back: "This is a progressive web app made with Vue. It's a digital aid for the Cryptid board game made for mobile. Implements SwiperJS and i18n external libraries.",
                     technologies: {
                         title: "Technologies employed:",
                         list: [
                             "vue",
+                            "swiperjs",
+                            "i18n",
                             "html5",
                             "css3",
                             "javascript"
@@ -188,11 +190,13 @@ const projects = [{
                     live: "https://cryptaid.vercel.app",
                     image: "cryp",
                     front: "Auxílio digital para o jogo de tabuleiro Cryptid.",
-                    back: "Um aplicativo de web progressivo feito com Vue. Um auxílio digital para o jogo de tabuleiro Cryptid feito principalmente para mobile.",
+                    back: "Um aplicativo de web progressivo feito com Vue. Um auxílio digital para o jogo de tabuleiro Cryptid feito principalmente para mobile. Implementa funcionalidades das bibliotecas SwiperJS e i18n.",
                     technologies: {
                         title: "Technologies employed:",
                         list: [
                             "vue",
+                            "swiperjs",
+                            "i18n",
                             "html5",
                             "css3",
                             "javascript"
