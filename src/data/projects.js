@@ -192,7 +192,7 @@ const projects = [{
                     front: "Auxílio digital para o jogo de tabuleiro Cryptid.",
                     back: "Um aplicativo de web progressivo feito com Vue. Um auxílio digital para o jogo de tabuleiro Cryptid feito principalmente para mobile. Implementa funcionalidades das bibliotecas SwiperJS e i18n.",
                     technologies: {
-                        title: "Technologies employed:",
+                        title: "Tecnologias utilizadas:",
                         list: [
                             "vue",
                             "swiperjs",
